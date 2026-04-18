@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────
+# NFIE - Narrative Framing Intelligence Engine
+# requirements.txt
+# ─────────────────────────────────────────────
+
+# ── Core NLP & Embeddings ──
+transformers==4.40.1          # HuggingFace transformer models (BERT, RoBERTa, etc.)
+sentence-transformers==2.7.0  # Converts text → dense vector embeddings
+torch==2.2.2                  # PyTorch backend for transformer inference
+tokenizers==0.19.1            # Fast tokenization (used internally by transformers)
+
+# ── Vector Search ──
+faiss-cpu==1.8.0              # Facebook AI Similarity Search — stores/queries embeddings fast
+
+# ── NLP Utilities ──
+spacy==3.7.4                  # Named Entity Recognition, POS tagging, dependency parsing
+# Run after install: python -m spacy download en_core_web_sm
+
+# ── Sentiment & Classification ──
+scipy==1.13.0                 # Scientific computing (used by some sklearn/faiss ops)
+scikit-learn==1.4.2           # Clustering (KMeans), evaluation metrics
+numpy==1.26.4                 # Array operations everywhere
+
+# ── API Framework ──
+fastapi==0.111.0              # Modern async REST API framework
+uvicorn==0.29.0               # ASGI server to run FastAPI
+pydantic==2.7.1               # Data validation & serialization (FastAPI uses this)
+
+# ── Dashboard ──
+streamlit==1.34.0             # Rapid UI dashboards in Python
+plotly==5.21.0                # Interactive charts (bar, scatter, heatmaps)
+pandas==2.2.2                 # DataFrames for tabular data manipulation
+
+# ── Data Fetching ──
+requests==2.31.0              # HTTP requests (NewsAPI, etc.)
+python-dotenv==1.0.1          # Load .env files (API keys, secrets)
+httpx==0.27.0                 # Async HTTP client (used by FastAPI test client)
+
+# ── Utilities ──
+tqdm==4.66.2                  # Progress bars for long loops
+loguru==0.7.2                 # Clean, structured logging (better than stdlib logging)
+rich==13.7.1                  # Beautiful terminal output & pretty printing
+python-dateutil==2.9.0        # Date parsing utilities
+
+# ── Testing ──
+pytest==8.2.0                 # Test framework
+pytest-asyncio==0.23.6        # Async test support for FastAPI
+
+# ── Caching ──
+diskcache==5.6.3              # Persistent disk-based cache (avoid re-running embeddings)
