@@ -33,7 +33,7 @@ The `.env` file in the project root contains the NewsAPI key and all configurati
 Verify or update as needed:
 
 ```
-NEWS_API_KEY=685a8f193ef741cea5d62f56f49debd4
+NEWS_API_KEY=""
 APP_ENV=development
 LOG_LEVEL=DEBUG
 API_HOST=0.0.0.0
